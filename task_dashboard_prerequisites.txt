@@ -1,0 +1,80 @@
+
+# Pre-requirements and Running Commands
+
+## Installation Steps:
+
+1. Ensure you have [Node.js](https://nodejs.org/) installed on your system.
+
+2. Create a new directory for the project:
+   ```sh
+   mkdir task-dashboard
+   cd task-dashboard
+   ```
+
+3. Initialize a new Node.js project:
+   ```sh
+   npm init -y
+   ```
+
+4. Install the required packages:
+   ```sh
+   npm install express
+   npm install --save-dev nodemon
+   ```
+
+## Project Structure:
+
+Create the following files in the project directory:
+- `index.html`
+- `style.css`
+- `script.js`
+- `server.js`
+
+## File Content:
+
+### index.html
+Place the HTML content provided above here.
+
+### style.css
+Place the CSS content provided above here.
+
+### script.js
+Place the JavaScript content provided above here.
+
+### server.js
+Create a simple Express server to serve the static files:
+
+```js
+const express = require('express');
+const path = require('path');
+const app = express();
+const PORT = 3000;
+
+app.use(express.static(path.join(__dirname, 'public')));
+
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, 'index.html'));
+});
+
+app.listen(PORT, () => {
+    console.log(`Server is running on http://localhost:${PORT}`);
+});
+```
+
+Note: Make sure to move `index.html`, `style.css`, and `script.js` into a `public` directory.
+
+## Running the Project:
+
+1. Start the server using `nodemon`:
+   ```sh
+   npx nodemon server.js
+   ```
+
+2. Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to see the task management dashboard in action.
+
+## Additional Information:
+
+- You can customize the project further by adding more features or improving the design as per your needs.
+- Ensure you have a stable internet connection for downloading the required packages.
+
+For any issues or contributions, feel free to reach out or contribute to the project repository.

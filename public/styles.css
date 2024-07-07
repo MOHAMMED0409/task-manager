@@ -1,0 +1,159 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #E9F1FA;
+    /* Light blue background */
+}
+
+nav {
+    background-color: #00ABE4;
+    /* Bright blue */
+    color: #FFFFFF;
+    /* White */
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+nav h1 {
+    margin: 0;
+}
+
+nav button {
+    background-color: #FFFFFF;
+    /* White */
+    border: none;
+    color: #00ABE4;
+    /* Bright blue */
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+main {
+    padding: 1rem;
+}
+
+#taskList {
+    list-style: none;
+    padding: 0;
+}
+
+#taskList li {
+    border: 1px solid #00ABE4;
+    /* Bright blue */
+    margin: 0.5rem 0;
+    padding: 1rem;
+    cursor: pointer;
+    background-color: #FFFFFF;
+    /* White */
+    color: #00ABE4;
+    /* Bright blue text */
+    border-radius: 10px;
+    /* Rounded edges */
+}
+
+#taskFormContainer {
+    display: none;
+    margin-top: 1rem;
+}
+
+#taskForm div {
+    margin-bottom: 1rem;
+}
+
+#taskForm label {
+    display: block;
+    color: #00ABE4;
+    /* Bright blue */
+}
+
+#taskForm input,
+#taskForm textarea {
+    width: 100%;
+    padding: 0.5rem;
+    margin-top: 0.5rem;
+    border: 1px solid #00ABE4;
+    /* Bright blue border */
+    border-radius: 5px;
+    /* Rounded edges */
+    box-sizing: border-box;
+}
+
+#taskDetailContainer {
+    display: none;
+    margin-top: 1rem;
+    border-radius: 15px;
+    /* Rounded edges */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: #FFFFFF;
+    /* White background */
+    color: #00ABE4;
+    /* Bright blue text */
+    border: 1px solid #00ABE4;
+    /* Bright blue border */
+    padding: 1rem;
+    width: auto;
+    /* Adapt size based on content */
+    max-width: 100%;
+    /* Ensure it doesn't overflow the parent container */
+    word-wrap: break-word;
+    /* Ensure long words wrap to the next line */
+}
+
+#taskDetailContainer:hover {
+    background-color: #E9F1FA;
+    /* Light blue on hover */
+    transform: translateY(-5px);
+}
+
+button {
+    appearance: none;
+    background-color: #00ABE4;
+    /* Bright blue */
+    border: 2px solid #00ABE4;
+    /* Bright blue */
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    /* White */
+    cursor: pointer;
+    display: inline-block;
+    font-family: Roobert, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: normal;
+    margin: 0;
+    min-height: 60px;
+    min-width: 0;
+    outline: none;
+    text-align: center;
+    text-decoration: none;
+    transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    will-change: transform;
+}
+
+button:disabled {
+    pointer-events: none;
+    background-color: #E9F1FA;
+    /* Light blue */
+    border-color: #E9F1FA;
+    /* Light blue */
+    color: #00ABE4;
+    /* Bright blue text */
+}
+
+button:hover {
+    box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+    transform: translateY(-2px);
+}
+
+button:active {
+    box-shadow: none;
+    transform: translateY(0);
+}
